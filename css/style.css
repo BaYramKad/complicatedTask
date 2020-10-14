@@ -3,4 +3,5 @@ body{
     color: rgb(34, 17, 17);
     font-size: 18px;
     border: 2px solid #fff;
+    opacity: 0.5;
 }

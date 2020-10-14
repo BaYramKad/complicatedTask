@@ -1,1 +1,1 @@
-console.log("abby")
+alert("abby");

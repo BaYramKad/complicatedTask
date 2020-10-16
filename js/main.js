@@ -1,11 +1,11 @@
 
-let money = 30000 + " руб";
+let money = 30000;
 let income = 10000;
-let addExpenses = "Комуналка 2 000 руб";
+let addExpenses = "2 000, 10000, 1800";
 let deposit = true;
-let mission = "4 500 000 руб";
-let period = 10 + " месяцев";
-let budgetDay = "30 000 руб";
+let mission = 4500000;
+let period = 10;
+let budgetDay = 30000;
 
 console.log(budgetDay);
 console.log(typeof money);
@@ -14,4 +14,4 @@ console.log(typeof deposit);
 console.log(addExpenses.length);
 console.log(`"Период равен = ${period}" и "Цель заработать ${mission}"`);
 console.log(addExpenses.toLowerCase());
-console.log(addExpenses.split(" "));
+console.log(addExpenses.split(", "));

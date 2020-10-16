@@ -1,6 +1,6 @@
 
 let money = 30000;
-let income = 10000;
+let income = "10000";
 let addExpenses = "2 000, 10000, 1800";
 let deposit = true;
 let mission = 4500000;

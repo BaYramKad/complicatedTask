@@ -1,17 +1,20 @@
+// const array = [2,6,6,2,1,9]; Этот пример я оставил для себя
 
-let money = 30000;
-let income = "Фриланс";
-let addExpenses = "Интернет, Еда, Оборудование";
-let deposit = true;
-let mission = 4500000;
-let period = 10;
-let budgetDay = 30000;
+// const result = array.map(item => {
+//     item *= item
+//     return item ** 3;
+// });
+// console.log(result);
+// console.log(result[0]);
 
-console.log(budgetDay);
-console.log(typeof money);
-console.log(typeof income);
-console.log(typeof deposit);
-console.log(addExpenses.length);
-console.log(`Период равен = ${period} и цель заработать ${mission}`);
-console.log(addExpenses.toLowerCase());
-console.log(addExpenses.split(", "));
+const num = 266219;
+let a = "" + num; 
+for (let i = 0; i < a.length; i++){
+    let num2 = ((a[i] * a[i]) ** 3); 
+    console.log(num2);
+};
+for (let i = 0; i < a.length; i++){
+    let num2 = ((a[i] * a[i]) ** 3); 
+    console.log(num2);
+    break;
+};

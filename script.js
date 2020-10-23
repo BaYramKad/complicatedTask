@@ -1,29 +1,31 @@
-
-let rDom = Math.floor(100 * Math.random()) + 1;
-function randomGame(rDom){
+function randomGame(){ 
+    let rDom = Math.floor(100 * Math.random()) + 1;
     let count = 10;
-    function name(){
-        let input = prompt(`"Угадайте число которое загадал компьютер от 1 до 100" У вас ${count} попыток`);
+    let input;
+    function result(){
+        input = prompt(`"Угадайте число которое загадал компьютер от 1 до 100" У вас ${count} попыток`);
         if (count > 0){
             if (input === null){
                 alert("Игра окончена"); 
-            }
+            } 
             count--;
             if(isNaN(input) || input.trim() === ""){
                 alert("Введите число!");
+                result();
+            } else if(input > rDom){
+                alert(`"Загаданное число меньше" Осталось ${count} попыток`);
+                result();
+            } else if(input < rDom){
+                alert(`"Загаданное число больше" Осталось ${count} попыток`);
+                result();
             } else if(input == rDom){
-                let al = confirm("Поздравляем!!! Вы угадали, Хотели бы сыграть еще ?");
-                if (al){
+                let cong = confirm("Поздравляем!!! Вы угадали, Хотели бы сыграть еще ?");
+                if (cong){
                     location.reload();
                 } else {
                     alert("Игра окончена");
                 }
-            } else if(input > rDom){
-                alert(`"Загаданное число меньше" Осталось ${count} попыток`);
-            } else if(input < rDom){
-                alert(`"Загаданное число больше" Осталось ${count} попыток`);
-            }  
-            name();
+            }
         } else if (count <= 0) {
             let exit = confirm("Попытки закончились, хотите сыграть еще?");
             console.log(exit);
@@ -32,8 +34,8 @@ function randomGame(rDom){
             } else {
                 alert("Игра окончена"); 
             }
-        } 
+        }     
     }
-    return name();
+    result();
 }
-randomGame(rDom);
+randomGame();
